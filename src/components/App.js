@@ -45,7 +45,6 @@ function reducer(state = initialState, action) {
     }
 }
 
-
 function App() {
     return (
         <div className="App">
