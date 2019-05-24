@@ -5,6 +5,8 @@ import './App.css';
 
 import { createStore } from 'redux';
 
+import { Provider } from 'react-redux';
+
 const initialState = {
     count: 0
 };
@@ -48,7 +50,9 @@ function App() {
     return (
         <div className="App">
             <Intro />
-            <Counter />
+            <Provider store={store}>
+                <Counter />
+            </Provider>
         </div>
     );
 }
