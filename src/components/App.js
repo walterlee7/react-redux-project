@@ -21,6 +21,7 @@ store.dispatch({ type: "INCREMENT" });
 store.dispatch({ type: "DECREMENT" });
 store.dispatch({ type: "MULTIPLY(2)" });
 store.dispatch({ type: "DIVIDE(2)" });
+store.dispatch({ type: "FACTORIAL" });
 store.dispatch({ type: "RESET" });
 
 function reducer(state = initialState, action) {
@@ -43,6 +44,20 @@ function reducer(state = initialState, action) {
         case 'DIVIDE(2)':
             return {
                 count: state.count / 2
+            };
+        case 'FACTORIAL':
+            //recursive method to factorial the counter
+            function factorialize(num) {
+                if (num < 0)
+                    return -1;
+                else if (num === 0)
+                    return 1;
+                else {
+                    return (num * factorialize(num - 1));
+                }
+            }
+            return {
+                count: factorialize(state.count)
             };
         case 'RESET':
             return {

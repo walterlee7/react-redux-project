@@ -37,6 +37,11 @@ class Counter extends React.Component {
         this.props.dispatch({ type: "DIVIDE(2)" });
     }
 
+    //factorizes the counter
+    factorial = () => {
+        this.props.dispatch({ type: "FACTORIAL" });
+    }
+
     render() {
         return (
             <div>
@@ -49,6 +54,7 @@ class Counter extends React.Component {
                 <div style={{ margin: 10 }}>
                     <button onClick={this.multiply2} style={{ margin: 10, fontSize: 25 }}>x2</button>
                     <button onClick={this.divide2} style={{ margin: 10, fontSize: 25 }}>/2</button>
+                    <button onClick={this.factorial} style={{ margin: 10, fontSize: 25 }}>Factorial</button>
                 </div>
                 <div style={{ margin: 10 }}>
                     <button onClick={this.reset} style={{ margin: 10, fontSize: 30 }}>Reset</button>
