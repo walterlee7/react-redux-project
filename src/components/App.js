@@ -19,6 +19,7 @@ var store = createStore(reducer);
 store.dispatch({ type: "INCREMENT" });
 store.dispatch({ type: "INCREMENT" });
 store.dispatch({ type: "DECREMENT" });
+store.dispatch({ type: "MULTIPLY(2)" });
 store.dispatch({ type: "RESET" });
 
 function reducer(state = initialState, action) {
@@ -33,6 +34,10 @@ function reducer(state = initialState, action) {
         case 'DECREMENT':
             return {
                 count: state.count - 1
+            };
+        case 'MULTIPLY(2)':
+            return {
+                count: state.count * 2
             };
         case 'RESET':
             return {
