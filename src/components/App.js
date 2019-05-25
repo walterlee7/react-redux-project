@@ -3,19 +3,17 @@ import Intro from './intro';
 import Counter from './counter';
 import './App.css';
 
+//redux state storage
 import { createStore } from 'redux';
 
+//element designation for state storage
 import { Provider } from 'react-redux';
 
 const initialState = {
     count: 0
 };
 
-// function reducer(state = initialState, action) {
-//     console.log('reducer', state, action);
-//     return state;
-// }
-
+//declare state storage with the reducer method
 var store = createStore(reducer);
 
 store.dispatch({ type: "INCREMENT" });
