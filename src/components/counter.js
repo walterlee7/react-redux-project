@@ -32,17 +32,23 @@ class Counter extends React.Component {
         this.props.dispatch({ type: "MULTIPLY(2)" });
     }
 
+    //divide counter by 2
+    divide2 = () => {
+        this.props.dispatch({ type: "DIVIDE(2)" });
+    }
+
     render() {
         return (
             <div>
                 <h2>Counter</h2>
                 <div style={{ margin: 10 }}>
-                    <button onClick={this.decrement} style={{ margin: 10, fontSize: 50 }}>-</button>
+                    <button onClick={this.decrement} style={{ margin: 10, fontSize: 25 }}>-1</button>
                     <span className="count" style={{ margin: 20, fontSize: 50 }}>{this.props.count}</span>
-                    <button onClick={this.increment} style={{ margin: 10, fontSize: 50 }}>+</button>
+                    <button onClick={this.increment} style={{ margin: 10, fontSize: 25 }}>+1</button>
                 </div>
                 <div style={{ margin: 10 }}>
-                    <button onClick={this.multiply2} style={{ margin: 10, fontSize: 30 }}>x2</button>
+                    <button onClick={this.multiply2} style={{ margin: 10, fontSize: 25 }}>x2</button>
+                    <button onClick={this.divide2} style={{ margin: 10, fontSize: 25 }}>/2</button>
                 </div>
                 <div style={{ margin: 10 }}>
                     <button onClick={this.reset} style={{ margin: 10, fontSize: 30 }}>Reset</button>

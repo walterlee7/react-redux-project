@@ -20,6 +20,7 @@ store.dispatch({ type: "INCREMENT" });
 store.dispatch({ type: "INCREMENT" });
 store.dispatch({ type: "DECREMENT" });
 store.dispatch({ type: "MULTIPLY(2)" });
+store.dispatch({ type: "DIVIDE(2)" });
 store.dispatch({ type: "RESET" });
 
 function reducer(state = initialState, action) {
@@ -38,6 +39,10 @@ function reducer(state = initialState, action) {
         case 'MULTIPLY(2)':
             return {
                 count: state.count * 2
+            };
+        case 'DIVIDE(2)':
+            return {
+                count: state.count / 2
             };
         case 'RESET':
             return {
