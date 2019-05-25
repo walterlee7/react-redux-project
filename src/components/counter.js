@@ -57,7 +57,7 @@ class Counter extends React.Component {
                     <button onClick={this.factorial} style={{ margin: 10, fontSize: 25 }}>Factorial</button>
                 </div>
                 <div style={{ margin: 10 }}>
-                    <button onClick={this.reset} style={{ margin: 10, fontSize: 30 }}>Reset</button>
+                    <button onClick={this.reset} style={{ margin: 10, fontSize: 25 }}>Reset</button>
                 </div>
             </div>
         )
