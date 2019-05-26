@@ -9,4 +9,7 @@ This displays a counter that can:
 3. multiply by 2
 4. divide by 2
 5. factorial
-6. reset to 0
+6. square by 2
+7. square root
+8. reset to 0
+9. set limit to -9999999 or +9999999
