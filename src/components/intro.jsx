@@ -3,10 +3,9 @@ import React from 'react';
 function Intro() {
     return (
         <div>
-            <p style={{ fontSize: 50 }}>
+            <h2 style={{ fontSize: 40 }}>
                 React with Redux
-            </p>
-            <hr />
+            </h2>
         </div>
     );
 }
