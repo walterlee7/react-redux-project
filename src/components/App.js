@@ -62,7 +62,7 @@ function reducer(state = initialState, action) {
                 }
             }
         case 'DECREMENT':
-            if (state.count <= -9999999) {
+            if (state.count >= -9999999) {
                 return {
                     count: state.count - 1
                 }
