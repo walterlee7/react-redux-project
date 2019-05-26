@@ -22,6 +22,8 @@ store.dispatch({ type: "DECREMENT" });
 store.dispatch({ type: "MULTIPLY(2)" });
 store.dispatch({ type: "DIVIDE(2)" });
 store.dispatch({ type: "FACTORIAL" });
+store.dispatch({ type: "SQUARE" });
+store.dispatch({ type: "SQUARE-ROOT" });
 store.dispatch({ type: "RESET" });
 
 function reducer(state = initialState, action) {
@@ -32,6 +34,14 @@ function reducer(state = initialState, action) {
         case 'INCREMENT':
             return {
                 count: state.count + 1
+            };
+        case 'SQUARE':
+            return {
+                count: state.count * state.count
+            };
+        case 'SQUARE-ROOT':
+            return {
+                count: Math.sqrt(state.count)
             };
         case 'DECREMENT':
             return {

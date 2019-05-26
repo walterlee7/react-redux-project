@@ -8,6 +8,14 @@ class Counter extends React.Component {
         this.props.dispatch({ type: "INCREMENT" });
     }
 
+    square = () => {
+        this.props.dispatch({ type: "SQUARE" });
+    }
+
+    squareRoot = () => {
+        this.props.dispatch({ type: "SQUARE-ROOT" });
+    }
+
     //decreases counter by 1
     decrement = () => {
         this.props.dispatch({ type: "DECREMENT" });
@@ -46,6 +54,10 @@ class Counter extends React.Component {
                     <button onClick={this.multiply2}>x2</button>
                     <button onClick={this.divide2}>/2</button>
                     <button onClick={this.factorial}>Factorial</button>
+                </div>
+                <div style={{ margin: 10 }}>
+                    <button onClick={this.square}>Square(2)</button>
+                    <button onClick={this.squareRoot}>Square Root</button>
                 </div>
                 <div style={{ margin: 10 }}>
                     <button onClick={this.reset}>Reset</button>
