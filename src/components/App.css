@@ -1,5 +1,5 @@
 body, html {
-    background-color: rgb(187, 187, 187);
+    background-color: rgb(134, 134, 134);
 }
 
 h2 {
@@ -8,18 +8,36 @@ h2 {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
-    margin-top: 0;
+    width: 75%;
+    margin-top: 0.5em;
     padding: 1em;
     border-radius: 15px;
 }
 
+h2.intro {
+    background-color: rgb(116, 190, 250);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    margin-top: 0.5em;
+    padding: 1em;
+    border-radius: 15px;
+    font-size: 40px;
+}
+
 span {
     background-color: white;
-    padding-left: 0.45em;
-    padding-right: 0.45em;
+    padding-left: 0.35em;
+    padding-right: 0.35em;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
     margin: 20;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 button {
@@ -36,5 +54,8 @@ button {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 95%;
+  border-radius: 15px;
+  padding-top: 0.15em;
+  margin-top: 1em;
 }

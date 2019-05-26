@@ -8,10 +8,12 @@ class Counter extends React.Component {
         this.props.dispatch({ type: "INCREMENT" });
     }
 
+    //squares the counter by 2
     square = () => {
         this.props.dispatch({ type: "SQUARE" });
     }
 
+    //takes square root of counter
     squareRoot = () => {
         this.props.dispatch({ type: "SQUARE-ROOT" });
     }
@@ -46,8 +48,10 @@ class Counter extends React.Component {
             <div>
                 <h2>Counter</h2>
                 <div style={{ margin: 10 }}>
-                    <button onClick={this.decrement}>-1</button>
                     <span className="count">{this.props.count}</span>
+                </div>
+                <div style={{ margin: 10 }}>
+                    <button onClick={this.decrement}>-1</button>
                     <button id="add" onClick={this.increment}>+1</button>
                 </div>
                 <div style={{ margin: 10 }}>

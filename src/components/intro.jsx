@@ -3,7 +3,7 @@ import React from 'react';
 function Intro() {
     return (
         <div>
-            <h2 style={{ fontSize: 40 }}>
+            <h2 className="intro">
                 React with Redux
             </h2>
         </div>

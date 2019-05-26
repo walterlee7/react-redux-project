@@ -32,29 +32,65 @@ function reducer(state = initialState, action) {
 
     switch (action.type) {
         case 'INCREMENT':
-            return {
-                count: state.count + 1
-            };
+            if (state.count <= 9999999) {
+                return {
+                    count: state.count + 1
+                }
+            } else {
+                return {
+                    count: "Too Large",
+                }
+            }
         case 'SQUARE':
-            return {
-                count: state.count * state.count
-            };
+            if (state.count <= 9999999) {
+                return {
+                    count: state.count * state.count
+                }
+            } else {
+                return {
+                    count: "Too Large",
+                }
+            }
         case 'SQUARE-ROOT':
-            return {
-                count: Math.sqrt(state.count)
-            };
+            if (state.count <= 9999999) {
+                return {
+                    count: Math.sqrt(state.count)
+                }
+            } else {
+                return {
+                    count: "Too Large",
+                }
+            }
         case 'DECREMENT':
-            return {
-                count: state.count - 1
-            };
+            if (state.count <= -9999999) {
+                return {
+                    count: state.count - 1
+                }
+            } else {
+                return {
+                    count: "Too Large",
+                }
+            }
         case 'MULTIPLY(2)':
-            return {
-                count: state.count * 2
-            };
+            if (state.count <= 9999999 || state.count <= -9999999) {
+                return {
+                    count: state.count * 2
+                }
+            } else {
+                return {
+                    count: "Too Large",
+                }
+            }
         case 'DIVIDE(2)':
-            return {
-                count: state.count / 2
-            };
+            if (state.count <= 9999999 || state.count <= -9999999) {
+                return {
+                    count: state.count / 2
+                }
+            } else {
+                return {
+                    count: "Too Large",
+                }
+            }
         case 'FACTORIAL':
             //recursive method to factorial the counter
             function factorialize(num) {
@@ -66,9 +102,16 @@ function reducer(state = initialState, action) {
                     return (num * factorialize(num - 1));
                 }
             }
-            return {
-                count: factorialize(state.count)
-            };
+
+            if (state.count <= 9999999) {
+                return {
+                    count: factorialize(state.count)
+                }
+            } else {
+                return {
+                    count: "Too Large",
+                }
+            }
         case 'RESET':
             return {
                 count: 0
