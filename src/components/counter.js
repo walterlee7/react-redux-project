@@ -2,23 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class Counter extends React.Component {
-    // state = { count: 0 }
 
     //increases counter by 1
     increment = () => {
-        // this.setState({
-        //     count: this.state.count + 1
-        // });
-
         this.props.dispatch({ type: "INCREMENT" });
     }
 
     //decreases counter by 1
     decrement = () => {
-        // this.setState({
-        //     count: this.state.count - 1
-        // });
-
         this.props.dispatch({ type: "DECREMENT" });
     }
 
@@ -47,17 +38,17 @@ class Counter extends React.Component {
             <div>
                 <h2>Counter</h2>
                 <div style={{ margin: 10 }}>
-                    <button onClick={this.decrement} style={{ margin: 10, fontSize: 25 }}>-1</button>
-                    <span className="count" style={{ margin: 20, fontSize: 50 }}>{this.props.count}</span>
-                    <button onClick={this.increment} style={{ margin: 10, fontSize: 25 }}>+1</button>
+                    <button onClick={this.decrement}>-1</button>
+                    <span className="count">{this.props.count}</span>
+                    <button id="add" onClick={this.increment}>+1</button>
                 </div>
                 <div style={{ margin: 10 }}>
-                    <button onClick={this.multiply2} style={{ margin: 10, fontSize: 25 }}>x2</button>
-                    <button onClick={this.divide2} style={{ margin: 10, fontSize: 25 }}>/2</button>
-                    <button onClick={this.factorial} style={{ margin: 10, fontSize: 25 }}>Factorial</button>
+                    <button onClick={this.multiply2}>x2</button>
+                    <button onClick={this.divide2}>/2</button>
+                    <button onClick={this.factorial}>Factorial</button>
                 </div>
                 <div style={{ margin: 10 }}>
-                    <button onClick={this.reset} style={{ margin: 10, fontSize: 25 }}>Reset</button>
+                    <button onClick={this.reset}>Reset</button>
                 </div>
             </div>
         )
