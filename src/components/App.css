@@ -12,6 +12,7 @@ h2 {
     margin-top: 0.5em;
     padding: 1em;
     border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
 h2.intro {
@@ -25,6 +26,7 @@ h2.intro {
     padding: 1em;
     border-radius: 15px;
     font-size: 40px;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
 span {
@@ -38,6 +40,7 @@ span {
     width: 95%;
     margin: 20;
     font-size: 40px;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
 button {
@@ -45,6 +48,7 @@ button {
     background-color: rgb(245, 197, 108);
     margin: 0.5em;
     font-size: 25px;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
 .App {
@@ -58,4 +62,5 @@ button {
   border-radius: 15px;
   padding-top: 0.15em;
   margin-top: 1em;
+  box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
