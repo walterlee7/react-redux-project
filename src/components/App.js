@@ -84,7 +84,7 @@ function reducer(state = initialState, action) {
         case 'DIVIDE(2)':
             if (state.count >= -9999999 && state.count <= 9999999) {
                 return {
-                    count: state.count / 2
+                    count: Number.parseFloat(state.count / 2).toFixed(8),
                 }
             } else {
                 return {
