@@ -54,7 +54,8 @@ function reducer(state = initialState, action) {
         case 'SQUARE-ROOT':
             if (state.count <= 9999999) {
                 return {
-                    count: Math.sqrt(state.count)
+                    //fixes decimal places allowed to 2
+                    count: Number.parseFloat(Math.sqrt(state.count)).toFixed(2),
                 }
             } else {
                 return {
@@ -84,8 +85,8 @@ function reducer(state = initialState, action) {
         case 'DIVIDE(2)':
             if (state.count >= -9999999 && state.count <= 9999999) {
                 return {
-                    //fixes decimal places allowed to 8
-                    count: Number.parseFloat(state.count / 2).toFixed(8),
+                    //fixes decimal places allowed to 2
+                    count: Number.parseFloat(state.count / 2).toFixed(2),
                 }
             } else {
                 return {
