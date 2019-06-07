@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="/Images/redux.png" alt="landing page" width="300"/>
 
 ## React Redux Project
 
@@ -13,3 +13,5 @@ This displays a counter that can:
 7. square root
 8. reset to 0
 9. set limit to -9999999 or +9999999
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
