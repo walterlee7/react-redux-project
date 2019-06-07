@@ -1,4 +1,4 @@
-<img src="/public/img/redux.png" alt="landing page" width="300"/>
+<img src="/public/img/redux.png" alt="landing page" width="500"/>
 
 ## React Redux Project
 
